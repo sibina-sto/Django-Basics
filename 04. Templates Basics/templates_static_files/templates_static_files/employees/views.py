@@ -18,25 +18,25 @@ class Person:
 
 def index(request):
     person = Person(
-        "Doncho",
-        "Minkov"
+        "John",
+        "Doe",
     )
     context = {
         "title": "Employees list",  # valid
         "1as": "567",  # valid
 
-        "new.employee": "Doncho",  # invalid
-        "new employee": "Doncho",  # invalid
+        "new.employee": "John",  # invalid
+        "new employee": "John",  # invalid
         "123": "456",  # invalid
 
         "person": {
-            "first_name": "Doncho",
-            "last_name": "Minkov",
+            "first_name": "John",
+            "last_name": "Doe",
         },
         "person_obj": person,
         "person_dict": person.__dict__,
 
-        "names": ["Doncho", "Gosho", "Maria"],
+        "names": ["John", "Gosho", "Maria"],
         "ages": [random.randrange(1, 100) for _ in range(10)],
         "ages_empty": [],
 
